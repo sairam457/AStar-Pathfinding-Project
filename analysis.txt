@@ -1,0 +1,27 @@
+Design Choices:
+---------------
+- Grid Representation: 2D list where each cell stores movement cost or None for obstacles.
+- A* Implementation: Priority queue via Python's heapq. g_score and came_from dictionaries track progress.
+- Heuristic: Euclidean distance multiplied by minimum terrain cost (admissible and consistent).
+- Visualization: ASCII-based path display using S (start), G (goal), * (path), # (obstacle).
+- Random Grid Generator: Creates varied terrain and obstacle densities for robust testing.
+
+Complexity Analysis:
+--------------------
+Let N = number of traversable cells.
+
+Time Complexity:
+A* expands each node once; heap operations are O(log N).
+Overall Time: O(N log N)
+
+Space Complexity:
+Storing g_score, came_from, and heap entries = O(N)
+
+Performance:
+Efficient for grids up to several thousand nodes. Scaling can be improved using hierarchical A* or jump point search.
+
+Edge Cases:
+------------
+1. Start or goal blocked -> returns None.
+2. Start == Goal -> returns [start].
+3. No path exists -> outputs message without error.
