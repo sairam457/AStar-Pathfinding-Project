@@ -18,3 +18,14 @@ The algorithm finds the **shortest-cost path** between a start and goal point, c
 ---
 
 ## 📂 Project Structure
+```
+AStar_Pathfinding_Project/
+│
+├── grid.py                # Grid representation and random grid generator
+├── astar.py               # A* search algorithm implementation
+├── visualize.py           # Text-based visualization of the path
+├── tests.py               # Generates test cases and runs A* on them
+├── analysis.txt           # Written design & complexity analysis
+└── README.md              # Instructions & summary for submission
+```
+
